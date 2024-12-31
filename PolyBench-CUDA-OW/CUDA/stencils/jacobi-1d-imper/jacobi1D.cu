@@ -29,7 +29,6 @@
 
 //#define RUN_ON_CPU
 
-// hdi=host_data_init, kdi=kernel-related_data_init gset=gpu_set, 
 clock_t start, end;
 double t_hdi, t_gset, t_malloc, t_write, t_kdi, t_kernel, t_read, t_clear;
 
@@ -253,11 +252,8 @@ int main()
 	int *init_mem = 0;
 	pthread_t thread_id;
 
-	//start = clock();
 	cudaSetDevice(0);
 	cudaMalloc((void**)&init_mem, 4096 * sizeof(int));
-	//end = clock();
-	//printf("Master overhead: %lf\n",(double)(end-start) / CLOCKS_PER_SEC);
 
 	tid = pthread_create(&thread_id, NULL, poly_main, NULL);
 	pthread_join(thread_id, (void**)&status);
