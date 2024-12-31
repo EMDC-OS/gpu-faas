@@ -368,7 +368,7 @@ int main(void)
 		exit(EXIT_FAILURE);
 	}
 
-	printf("%d main time = %lf\n", (*test_fdtd)(5), (float)(end-start)/CLOCKS_PER_SEC);
+	(*test_fdtd)(5);
 	dlclose(handle_fdtd);
 
 
@@ -389,7 +389,7 @@ int main(void)
 		exit(EXIT_FAILURE);
 	}
 
-	printf("%d main time = %lf\n", (*test_jacobi1d)(5), (float)(end-start)/CLOCKS_PER_SEC);
+	(*test_jacobi1d)(5);
 	dlclose(handle_jacobi1d);
 
 
@@ -410,7 +410,7 @@ int main(void)
 		exit(EXIT_FAILURE);
 	}
 
-	printf("%d main time = %lf\n", (*test_jacobi2d)(5), (float)(end-start)/CLOCKS_PER_SEC);
+	(*test_jacobi2d)(5);
 	dlclose(handle_jacobi2d);
 
 
