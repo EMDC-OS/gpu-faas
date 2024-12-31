@@ -1,3 +1,0 @@
-Progress
-- Linear increment at querying GPU (1st_API_time = a*(#_of_GPU) + b)
-- MIG 1st_API_time, 1st_malloc_time depends on GPU instance (not related to compute instance)
